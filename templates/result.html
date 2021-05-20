@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Movies Reviews Classifier</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='spam-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+
+		<!-- Website Title -->
+		<div class="container">
+			<h2 class='container-heading'><span>Movies Reviews Classifier</span></h2>
+	        	<div class='description'>
+				<p>A Machine Learning Web App which is implemented using Flask</p>
+			</div>
+		</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class='danger'>Positive Review.</span></h1>
+				<img class="gif" src="https://media.giphy.com/media/l1J9vkau0r5BYk07e/giphy.gif" alt="happy Image" , height="400" , width="400">
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='safe'>Negative Review</span></h1>
+				<img class="gif" src="https://media.giphy.com/media/Pn1h5Un3LZD9uq3u07/giphy.gif" alt="sad image" , height="400" , width="400">
+			{% endif %}
+		</div>
+
+		<!-- Footer -->
+        <div class='footer'>
+            <!-- <div class="contact">
+                <a target="_blank" href="https://github.com/anujvyas/Spam-SMS-Classifier-Deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/anujkvyas"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+            </div> -->
+            <p class='footer-description'>Made with ❤️ by Jatin Sadhwani.</p>
+        </div>
+
+	</body>
+</html>
